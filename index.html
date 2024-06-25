@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./lemon.svg" type="image/x-icon">
+    <title>My skill: Baking.</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Lemon Cookies</h1>
+    <main>
+        <div class="video">
+            <iframe class="video-youtube" src="https://www.youtube.com/embed/2wEIGhPaphQ?si=4WLfFtGjZGjtIRZW"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <footer class="seccion-estrellitas">
+                <h4 class="rather">Rate it!</h4>
+                <form>
+                    <p class="clasificacion">
+                        <input type="radio" id="radio1" name="estrellas_1" value="5"><!--
+                        --><label for="radio1">★</label><!--
+                        --><input id="radio2" type="radio" name="estrellas_2" value="4"><!--
+                        --><label for="radio2">★</label><!--
+                        --><input id="radio3" type="radio" name="estrellas_3" value="3"><!--
+                        --><label for="radio3">★</label><!--
+                        --><input id="radio4" type="radio" name="estrellas_4" value="2"><!--
+                        --><label for="radio4">★</label><!--
+                        --><input id="radio5" type="radio" name="estrellas_5" value="1"><!--
+                        --><label for="radio5">★</label><!--
+                        -->
+                    </p>
+                </form>
+            </footer>
+        </div>
+        <div class="descripcion">
+            <p>These cookies are perfect for any occasion, with their fresh and citrus flavor that makes them
+                irresistible.
+            </p>
+            <br>
+            <p>Also, they are very simple to prepare, so they don't need to be experts in the kitchen to achieve a
+                delicious result. I'll show you step by step how to make these cookies from scratch. I'll share all the
+                tips and tricks to make them perfect. </p>
+                <br>
+            <p>You will also have the ingredients, steps and a demo video, you can also try them and rate them with the
+                stars below! I hope you enjoy it Let's bake!</p>
+            <button type="button" class="collapsible shrikhand-regular">Ingredients</button>
+            <div class="content">
+                <ul class="ingredientes" id="ingredientes-lista">
+                    <li>
+                        <div class="checkbox-wrapper-19">
+                            <input type="checkbox" id="cbtest-1" />
+                            <label for="cbtest-1" class="check-box">
+                        </div>1 egg
+                    </li>
+                    <li>
+                        <div class="checkbox-wrapper-19">
+                            <input type="checkbox" id="cbtest-2" />
+                            <label for="cbtest-2" class="check-box">
+                        </div>¼ cup of sugar
+                    </li>
+                    <li>
+                        <div class="checkbox-wrapper-19">
+                            <input type="checkbox" id="cbtest-3" />
+                            <label for="cbtest-3" class="check-box">
+                        </div>¼ cup of sunflower oil
+                    </li>
+                    <li>
+                        <div class="checkbox-wrapper-19">
+                            <input type="checkbox" id="cbtest-4" />
+                            <label for="cbtest-4" class="check-box">
+                        </div>zest of one lemon
+                    </li>
+                    <li>
+                        <div class="checkbox-wrapper-19">
+                            <input type="checkbox" id="cbtest-5" />
+                            <label for="cbtest-5" class="check-box">
+                        </div>juice of half a lemon
+                    </li>
+                    <li>
+                        <div class="checkbox-wrapper-19">
+                            <input type="checkbox" id="cbtest-6" />
+                            <label for="cbtest-6" class="check-box">
+                        </div>1⅓ cup of self-rising flour
+                    </li>
+
+                </ul>
+            </div>
+            <button type="button" class="collapsible shrikhand-regular">Steps</button>
+            <div class="content">
+                <ul>
+                    <li>Step 1: beat the egg with the sugar and lemon zest, once integrated all add the sunflower oil
+                        and mix again until all the ingredients are integrated.</li>
+                    <li>Step 2: Add the sifted flour in 3 batches. After integrating the first batch; Add the lemon
+                        juice, integrate and continue adding the flour.</li>
+                </ul>
+                <div class="importante"><span>IMPORTANT‼️</span> do not knead, just integrate enough so that there is no
+                    dry flour left, the key is not to manipulate the mixture too much.</div>
+                <ul>
+                    <li>Step 3: Let stand for 15 minutes in the fridge, at the same time preheat the oven to medium
+                        temperature.</li>
+                    <li>Step 4: Make balls of the dough of approximately the same size, not too big because they will
+                        grow later. Put them on a tray with parchment paper or oiled and floured. </li>
+                </ul>
+                <div class="nota"><span>note: </span> the cookies will grow, so it is better to leave some separation
+                    between each one so that they do not come together when baking.</div>
+                <ul>
+                    <li>Step 5: Bake at minimum heat or 180°C, remove them once the cookie base is lightly browned.</li>
+
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const ingredientList = document.getElementById('ingredientes-lista')
+        ingredientList.addEventListener('click', (e) => {
+            if (e.target.nodeName === 'LABEL') {
+                const check = e.target.lastChild.parentElement.parentElement.parentElement
+                const checkState = e.target.lastChild.parentElement.parentElement.parentElement.childNodes[1].childNodes[1].checked
+                if(!checkState) {
+                    check.classList.add('check')
+                } else {
+                    check.classList.remove('check')
+                }
+            }
+        })
+    </script>
+
+    <script>
+        let coll = document.getElementsByClassName("collapsible");
+
+        for (let i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    content.style.padding = "0 26px";
+                } else {
+                    console.log(content.scrollHeight + 10)
+                    content.style.maxHeight = (content.scrollHeight + 40) + "px";
+                    content.style.padding = "10px 26px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
